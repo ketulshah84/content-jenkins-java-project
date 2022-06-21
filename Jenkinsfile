@@ -34,7 +34,7 @@ pipeline {
       }
       steps {
         sh "if ! [ -d '/var/www/html/rectangles/all/${env.BUILD_NUMBER}' ]; then sudo mkdir /var/www/html/rectangles/all/${env.BUILD_NUMBER}; fi"
-        sh "cp dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BUILD_NUMBER}/"
+        sh "sudo cp dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BUILD_NUMBER}/"
       }
     }
     stage("Running on CentOS") {
