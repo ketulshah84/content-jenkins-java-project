@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     MAJOR_VERSION = 1
-    BRANCH_NAME = development
+    branch = development
   }
 
   stages {
@@ -61,7 +61,8 @@ pipeline {
         label 'apache'
       }
       when {
-	echo branch
+	echo "Ola Ola..."
+	echo $branch
         branch 'master'
       }
       steps {
