@@ -74,6 +74,7 @@ pipeline {
         branch 'development'
       }
       steps {
+	echo "Start..."
         echo "Stashing Any Local Changes"
         sh 'git stash'
         echo "Checking Out Development Branch"
