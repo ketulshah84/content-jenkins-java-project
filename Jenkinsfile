@@ -60,8 +60,6 @@ pipeline {
         label 'apache'
       }
       when {
-	echo "Ola Ola..."
-	echo $branch
         branch 'master'
       }
       steps {
