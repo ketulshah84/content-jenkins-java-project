@@ -48,7 +48,6 @@ pipeline {
     }
     stage("Test on Debian") {
       agent {
-	      sudo chmod 666 /var/run/docker.sock
 	      docker 'openjdk:8u121-jre'
       }
       steps {
