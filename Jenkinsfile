@@ -33,7 +33,7 @@ pipeline {
         label 'apache'
       }
       steps {
-        sh "if ! [ -d '/var/www/html/rectangles/all/${env.BRANCH_NAME}' ]; then sudo mkdir /var/www/html/rectangles/all/${env.BRANCH_NAME}; fi"
+        sh "if ! [ -d '/var/www/html/rectangles/all/${env.BRANCH_NAME}' ]; then sudo mkdir /var/www/html/rectangles/all/${env.BUILD_NUMBER}; fi"
         sh "sudo cp dist/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/${env.BUILD_NUMBER}/"
       }
     }
