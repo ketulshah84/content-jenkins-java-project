@@ -61,7 +61,7 @@ pipeline {
         label 'apache'
       }
       when {
-        branch 'master'
+        BRANCH_NAME 'master'
       }
       steps {
         sh "sudo cp /var/www/html/rectangles/all/${env.BUILD_NUMBER}/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar"
@@ -72,7 +72,7 @@ pipeline {
         label 'apache'
       }
       when {
-        branch 'development'
+        BRANCH_NAME 'development'
       }
       steps {
         echo "Stashing Any Local Changes"
